@@ -1,0 +1,17 @@
+{
+  "name": "cophone",
+  "version": "1.0.0",
+  "description": "Collection of functions to format Colombian phone numbers.",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebasbit/cophone.git"
+  },
+  "author": "Sebastian Torres Cabrera",
+  "homepage": "https://github.com/sebasbit/cophone#readme",
+  "devDependencies": {
+    "jest": "^28.0.3"
+  }
+}
