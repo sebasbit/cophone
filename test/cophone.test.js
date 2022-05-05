@@ -1,4 +1,4 @@
-const formatPhone = require('./../src/cophone')
+const cophone = require('./../src/cophone')
 
 /**
  * 1. Take 300000000 return 300 000 000
@@ -14,7 +14,7 @@ test('it should return null when the phone is wrong', () => {
     // assign
     const wrongPhone = ''
     // act
-    formated = formatPhone(wrongPhone)
+    formated = cophone.format(wrongPhone)
     // assert
     expect(formated).toBeNull()
 })

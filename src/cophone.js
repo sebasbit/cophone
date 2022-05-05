@@ -1,5 +1,7 @@
-function formatPhone() {
+const format = () => {
     return null
 }
 
-module.exports = formatPhone
+module.exports = {
+    format
+}
