@@ -3,15 +3,7 @@ const format = (phone) => {
     return null
   }
 
-  if (!phone.match(/^[0-9]+$/)) {
-    return null
-  }
-
-  if (phone.length < 9 || phone.length > 9) {
-    return null
-  }
-
-  if (!phone.startsWith('3')) {
+  if (!phone.match(/^3\d{8}$/)) {
     return null
   }
 
