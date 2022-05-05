@@ -31,3 +31,14 @@ test('it should return null when the cell phones length is invalid', () => {
   const greaterLength = '3000000001'
   expect(cophone.format(greaterLength)).toBeNull()
 })
+
+test('it should return null when the cell phones does not start with 3', () => {
+  for (var i = 1; i <= 9; i++) {
+    if (i === 3) {
+        continue
+    }
+
+    let phone = `${i}00000000`
+    expect(cophone.format(phone)).toBeNull()
+  }
+})

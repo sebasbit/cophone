@@ -7,6 +7,10 @@ const format = (phone) => {
     return null
   }
 
+  if (!phone.startsWith('3')) {
+    return null
+  }
+
   // 300 000 000
   // ^^^ ^^^ ^^^
   // 012 345 678
