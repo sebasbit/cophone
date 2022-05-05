@@ -3,6 +3,10 @@ const format = (phone) => {
     return null
   }
 
+  if (!phone.match(/^[0-9]+$/)) {
+    return null
+  }
+
   if (phone.length < 9 || phone.length > 9) {
     return null
   }

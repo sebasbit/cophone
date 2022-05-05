@@ -19,6 +19,13 @@ test('it should return null when the phone is empty', () => {
   expect(formated).toBeNull()
 })
 
+test('it should return null when the phone contains non-numeric characters', () => {
+  const phone = '3!$%&/()='
+  //             300000000
+  const formated = cophone.format(phone)
+  expect(formated).toBeNull()
+})
+
 test('it should return a formatted cell phone when a good one is provided', () => {
     expect(cophone.format('300000000')).toBe('300 000 000')
     expect(cophone.format('300000001')).toBe('300 000 001')
