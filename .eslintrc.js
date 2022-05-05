@@ -12,5 +12,19 @@ module.exports = {
     ecmaVersion: 'latest'
   },
   rules: {
-  }
+  },
+  overrides: [
+    {
+      files: [
+        'test/*.test.js'
+      ],
+      plugins: [
+        'jest'
+      ],
+      extends: [
+        'plugin:jest/recommended',
+        'plugin:jest/style'
+      ]
+    }
+  ]
 }
