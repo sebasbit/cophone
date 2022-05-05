@@ -11,10 +11,10 @@ const cophone = require('./../src/cophone')
  */
 
 test('it should return null when the phone is wrong', () => {
-    // assign
-    const wrongPhone = ''
-    // act
-    formated = cophone.format(wrongPhone)
-    // assert
-    expect(formated).toBeNull()
+  // assign
+  const wrongPhone = ''
+  // act
+  const formated = cophone.format(wrongPhone)
+  // assert
+  expect(formated).toBeNull()
 })

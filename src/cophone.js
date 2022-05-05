@@ -1,7 +1,7 @@
 const format = () => {
-    return null
+  return null
 }
 
 module.exports = {
-    format
+  format
 }
