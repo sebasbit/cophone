@@ -31,14 +31,10 @@ test('it should return a formatted cell phone when a good one but different is p
     expect(formated).toBe('300 000 001')
 })
 
-test('it should return null when the cell phones length is greater than 9', () => {
-  const phone = '3000000001'
-  const formated = cophone.format(phone)
-  expect(formated).toBeNull()
-})
+test('it should return null when the cell phones length is invalid', () => {
+  const lessLength = '30000000'
+  expect(cophone.format(lessLength)).toBeNull()
 
-test('it should return null when the cell phones length is less than 9', () => {
-  const phone = '30000000'
-  const formated = cophone.format(phone)
-  expect(formated).toBeNull()
+  const greaterLength = '3000000001'
+  expect(cophone.format(greaterLength)).toBeNull()
 })

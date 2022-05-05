@@ -3,11 +3,7 @@ const format = (phone) => {
     return null
   }
 
-  if (phone.length > 9) {
-    return null
-  }
-
-  if (phone.length < 9) {
+  if (phone.length < 9 || phone.length > 9) {
     return null
   }
 
