@@ -10,7 +10,7 @@ const cophone = require('./../src/cophone')
  * 3. Take 018000000000 return 01 8000 000 000
  */
 
-test('it should return null when the phone is wrong', () => {
+test('it should return null when the phone is empty', () => {
   // assign
   const wrongPhone = ''
   // act
@@ -23,4 +23,10 @@ test('it should return a formatted cell phone when a good one is provided', () =
     const phone = '300000000'
     const formated = cophone.format(phone)
     expect(formated).toBe('300 000 000')
+})
+
+test('it should return a formatted cell phone when a good one but different is provided', () => {
+    const phone = '300000001'
+    const formated = cophone.format(phone)
+    expect(formated).toBe('300 000 001')
 })

@@ -1,9 +1,12 @@
 const format = (phone) => {
-  if (phone == '300000000') {
-    return '300 000 000'
+  if (phone === '') {
+    return null
   }
 
-  return null
+  // 300 000 000
+  // ^^^ ^^^ ^^^
+  // 012 345 678
+  return phone.substring(0, 3) + ' ' + phone.substring(3, 6) + ' ' + phone.substring(6)
 }
 
 module.exports = {
