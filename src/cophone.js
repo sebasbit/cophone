@@ -3,6 +3,14 @@ const format = (phone) => {
     return null
   }
 
+  if (phone.length > 9) {
+    return null
+  }
+
+  if (phone.length < 9) {
+    return null
+  }
+
   // 300 000 000
   // ^^^ ^^^ ^^^
   // 012 345 678
