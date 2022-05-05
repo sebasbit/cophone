@@ -27,8 +27,8 @@ test('it should return null when the phone contains non-numeric characters', () 
 })
 
 test('it should return a formatted cell phone when a good one is provided', () => {
-    expect(cophone.format('300000000')).toBe('300 000 000')
-    expect(cophone.format('300000001')).toBe('300 000 001')
+  expect(cophone.format('300000000')).toBe('300 000 000')
+  expect(cophone.format('300000001')).toBe('300 000 001')
 })
 
 test('it should return null when the cell phones length is invalid', () => {
@@ -40,12 +40,18 @@ test('it should return null when the cell phones length is invalid', () => {
 })
 
 test('it should return null when the cell phones does not start with 3', () => {
-  for (var i = 1; i <= 9; i++) {
-    if (i === 3) {
-        continue
-    }
+  const cases = [
+    '100000000',
+    '200000000',
+    '400000000',
+    '500000000',
+    '600000000',
+    '700000000',
+    '800000000',
+    '900000000'
+  ]
 
-    let phone = `${i}00000000`
+  cases.forEach(phone => {
     expect(cophone.format(phone)).toBeNull()
-  }
+  })
 })
