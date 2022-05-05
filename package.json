@@ -1,7 +1,8 @@
 {
   "name": "cophone",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Collection of functions to format Colombian phone numbers.",
+  "type": "commonjs",
   "scripts": {
     "test": "jest"
   },
