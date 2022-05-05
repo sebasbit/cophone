@@ -20,15 +20,8 @@ test('it should return null when the phone is empty', () => {
 })
 
 test('it should return a formatted cell phone when a good one is provided', () => {
-    const phone = '300000000'
-    const formated = cophone.format(phone)
-    expect(formated).toBe('300 000 000')
-})
-
-test('it should return a formatted cell phone when a good one but different is provided', () => {
-    const phone = '300000001'
-    const formated = cophone.format(phone)
-    expect(formated).toBe('300 000 001')
+    expect(cophone.format('300000000')).toBe('300 000 000')
+    expect(cophone.format('300000001')).toBe('300 000 001')
 })
 
 test('it should return null when the cell phones length is invalid', () => {
