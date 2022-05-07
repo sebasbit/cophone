@@ -3,8 +3,15 @@ const format = (phone) => {
     return null
   }
 
-  if (!phone.match(/^3\d{8}$/)) {
+  if (!phone.match(/^(57)?3\d{8}$/)) {
     return null
+  }
+
+  // 57 300 000 000
+  // ^^ ^^^ ^^^ ^^^
+  // 01 234 567 890
+  if (phone.startsWith('57')) {
+    return '+' + phone.substring(0, 2) + ' ' + phone.substring(2, 5) + ' ' + phone.substring(5, 8) + ' ' + phone.substring(8)
   }
 
   // 300 000 000

@@ -55,3 +55,8 @@ test('it should return null when the cell phones does not start with 3', () => {
     expect(cophone.format(phone)).toBeNull()
   })
 })
+
+test('it should return a formatted cell phone when a valid one with prefix 57 is provided', () => {
+  const phone = '57300000000'
+  expect(cophone.format(phone)).toBe('+57 300 000 000')
+})
